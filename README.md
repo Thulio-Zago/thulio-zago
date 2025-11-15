@@ -31,60 +31,86 @@ Apaixonada por tecnologia, sou independente, racional e adoro explorar novas pos
 
 <img 
     align="left" 
-    alt="HTML"
-    title="HTML" 
-    width="30px" 
-    style="padding-right: 10px;" 
-    src=" https://devicon-website.vercel.app/api/java/original.svg " > 
-<img 
-    align="left" 
-    alt="CSS" 
-    title="CSS"
-    width="30px" 
-    style="padding-right: 10px;" 
-    src=" https://devicon-website.vercel.app/api/linkedin/original.svg "  
-/>
-<img 
-    align="left" 
-    alt="JavaScript" 
-    title="JavaScript"
-    width="30px" 
-    style="padding-right: 10px;" 
-    src= https://devicon-website.vercel.app/api/vscode/original.svg  
-/>
-<img 
-    align="left" 
-    alt="TypeScript"
-    title="TypeScript" 
-    width="30px" 
-    style="padding-right: 10px;" 
-    src="https://devicon-website.vercel.app/api/github/original.svg "
-/>
-<img 
-    align="left" 
-    alt="React"
-    title="React" 
-    width="30px" 
-    style="padding-right: 10px;" 
-    src=" https://devicon-website.vercel.app/api/git/original.svg "  
-/>
-<img 
-    align="left" 
-    alt="JQuery" 
-    title="JQuery"
-    width="30px" 
-    style="padding-right: 10px;" 
-    src=" https://devicon-website.vercel.app/api/c/original.svg "  
-/>
-<img 
-    align="left" 
-    alt="Python" 
-    title="Python"
-    width="30px" 
-    style="padding-right: 10px;" 
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" 
+    alt="Java"
+    title="Java"
+    width="40px"
+    style="padding-right: 10px;"  
+    src="https://devicon-website.vercel.app/api/java/original.svg"
 />
 
-<br/>
-<br/>
+<img 
+    align="left" 
+    alt="C"
+    title="C"
+    width="40px"
+    style="padding-right: 10px;"  
+    src="https://devicon-website.vercel.app/api/c/original.svg"
+/>
 
+<img 
+    align="left" 
+    alt="LinkedIn"
+    title="LinkedIn"
+    width="40px"
+    style="padding-right: 10px;"  
+    src="https://devicon-website.vercel.app/api/linkedin/original.svg"
+/>
+
+<img 
+    align="left" 
+    alt="Git"
+    title="Git"
+    width="40px"
+    style="padding-right: 10px;"  
+    src="https://devicon-website.vercel.app/api/git/original.svg"
+/>
+
+<img 
+    align="left" 
+    alt="GitHub"
+    title="GitHub"
+    width="40px"
+    style="padding-right: 10px;"  
+    src="https://devicon-website.vercel.app/api/github/original.svg"
+/>
+
+<img 
+    align="left" 
+    alt="Eclipse"
+    title="Eclipse IDE"
+    width="40px"
+    style="padding-right: 10px;"  
+    src="https://devicon-website.vercel.app/api/eclipse/original.svg"
+/>
+
+<img 
+    align="left" 
+    alt="AI"
+    title="Artificial Intelligence"
+    width="40px"
+    style="padding-right: 10px;"  
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
+/>
+
+<br/><br/>
+
+
+### 📊 Estatísticas
+
+<p>
+  <img 
+    align="left" 
+    alt="GitHub Stats" 
+    height="200" 
+    style="padding-right: 10px;" 
+    src="https://github-readme-stats.vercel.app/api?username=Thulio-Zago&show_icons=true&theme=tokyonight&include_all_commits=true&locale=pt-br" 
+  />
+
+<img 
+      align="left" 
+      alt="GitHub Stats" 
+      height="200" 
+      src="https://github-readme-stats.vercel.app/api/top-langs/?username=Thulio-Zago&theme=tokyonight&layout=compact&custom_title=Tecnologias&langs_count=9" 
+  />
+
+</p>
