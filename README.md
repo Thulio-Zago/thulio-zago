@@ -74,14 +74,6 @@ Apaixonada por tecnologia, sou independente, racional e adoro explorar novas pos
     src="https://devicon-website.vercel.app/api/github/original.svg"
 />
 
-<img 
-    align="left" 
-    alt="Eclipse"
-    title="Eclipse IDE"
-    width="40px"
-    style="padding-right: 10px;"  
-    src="https://devicon-website.vercel.app/api/eclipse/original.svg"
-/>
 
 <img 
     align="left" 
