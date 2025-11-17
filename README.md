@@ -95,14 +95,14 @@ Apaixonada por tecnologia, sou independente, racional e adoro explorar novas pos
     alt="GitHub Stats" 
     height="200" 
     style="padding-right: 10px;" 
-    src="https://github-readme-stats.vercel.app/api?username=Thulio-Zago&show_icons=true&theme=tokyonight&include_all_commits=true&locale=pt-br&cache_seconds=360" 
+    src="https://github-readme-stats.vercel.app/api?username=Thulio-Zago&show_icons=true&theme=tokyonight&include_all_commits=true&locale=pt-br&cache_seconds=3600" 
   />
 
 <img 
       align="left" 
       alt="GitHub Stats" 
       height="200" 
-      src="https://github-readme-stats.vercel.app/api/top-langs/?username=Thulio-Zago&theme=tokyonight&layout=compact&custom_title=Tecnologias&langs_count=9&cache_seconds=360" 
+      src="https://github-readme-stats.vercel.app/api/top-langs/?username=Thulio-Zago&theme=tokyonight&layout=compact&custom_title=Tecnologias&langs_count=9&cache_seconds=3600" 
   />
 
 </p>
