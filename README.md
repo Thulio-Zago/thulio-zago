@@ -1,108 +1,60 @@
-#  💻 Thúlio Zago 
+name: Generate GitHub Profile Stats
 
-Me chamo Thúlio Zago, tenho 19 anos e sou natural do Americana/SP. Concluí o ensino médio no Colegio Politec. Atualmente, estou cursando Sistemas da Informação na Fam.
+on:
+  schedule:
+    - cron: '0 0 * * *' # diário
+  workflow_dispatch: {}
 
-Apaixonada por tecnologia, sou independente, racional e adoro explorar novas possibilidades no mundo digital.
+jobs:
+  generate:
+    runs-on: ubuntu-latest
 
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
+      - name: Fetch GitHub profile data and generate SVG
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          mkdir -p assets
+          USER="Thulio-Zago"
 
+          echo "Fetching user data..."
+          user_json=$(curl -s "https://api.github.com/users/$USER")
+          followers=$(echo "$user_json" | jq -r '.followers')
+          public_repos=$(echo "$user_json" | jq -r '.public_repos')
 
-<p align="left">
-    </a> 
-    <a href="https://github.com/Thulio-Zago?tab=repositories&sort=stargazers">
-        <img 
-            alt="Total de estrelas" 
-            title="Total de estrelas GitHub" 
-            src="https://custom-icon-badges.demolab.com/github/stars/Thulio-Zago?color=55960c&style=for-the-badge&labelColor=488207&logo=star&label=estrelas&cache_seconds=360"
-        />
-    </a>
-    <a href="https://github.com/Thulio-Zago?tab=followers">
-        <img 
-            alt="Seguidores" 
-            title="Me siga no GitHub" 
-            src="https://custom-icon-badges.demolab.com/github/followers/Thulio-Zago?color=236ad3&labelColor=1155ba&style=for-the-badge&logo=github&label=Seguidores&logoColor=white"
-        />
-    </a>
-</p>
+          echo "Calculating total stars (may take a moment)..."
+          # pega até 100 repositórios; para mais repos, usar paginação
+          stars=$(curl -s "https://api.github.com/users/$USER/repos?per_page=100" | jq '[.[].stargazers_count] | add')
+          stars=${stars:-0}
 
----
+          echo "Gerando SVG em assets/github-stats.svg"
+          cat > assets/github-stats.svg <<'SVG'
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="140">
+  <rect width="100%" height="100%" fill="#0f172a"/>
+  <g fill="#cbd5e1" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial" font-size="16">
+    <text x="24" y="42">Repositórios: REPOS</text>
+    <text x="24" y="72">Seguidores: FOLLOWERS</text>
+    <text x="24" y="102">Estrelas totais: STARS</text>
+  </g>
+</svg>
+SVG
 
-### 🤖 Linguagens e Tecnologias
+          sed -i "s/REPOS/${public_repos}/g" assets/github-stats.svg
+          sed -i "s/FOLLOWERS/${followers}/g" assets/github-stats.svg
+          sed -i "s/STARS/${stars}/g" assets/github-stats.svg
 
-<img 
-    align="left" 
-    alt="Java"
-    title="Java"
-    width="40px"
-    style="padding-right: 10px;"  
-    src="https://devicon-website.vercel.app/api/java/original.svg"
-/>
-
-<img 
-    align="left" 
-    alt="C"
-    title="C"
-    width="40px"
-    style="padding-right: 10px;"  
-    src="https://devicon-website.vercel.app/api/c/original.svg"
-/>
-
-<img 
-    align="left" 
-    alt="LinkedIn"
-    title="LinkedIn"
-    width="40px"
-    style="padding-right: 10px;"  
-    src="https://devicon-website.vercel.app/api/linkedin/original.svg"
-/>
-
-<img 
-    align="left" 
-    alt="Git"
-    title="Git"
-    width="40px"
-    style="padding-right: 10px;"  
-    src="https://devicon-website.vercel.app/api/git/original.svg"
-/>
-
-<img 
-    align="left" 
-    alt="GitHub"
-    title="GitHub"
-    width="40px"
-    style="padding-right: 10px;"  
-    src="https://devicon-website.vercel.app/api/github/original.svg"
-/>
-
-
-<img 
-    align="left" 
-    alt="AI"
-    title="Artificial Intelligence"
-    width="40px"
-    style="padding-right: 10px;"  
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
-/>
-
-<br/><br/>
-
-
-### 📊 Estatísticas
-
-<p>
-  <img 
-    align="left" 
-    alt="GitHub Stats" 
-    height="200" 
-    style="padding-right: 10px;" 
-    src="https://github-readme-stats.vercel.app/api?username=Thulio-Zago&show_icons=true&theme=tokyonight&include_all_commits=true&locale=pt-br&cache_seconds=3600" 
-  />
-
-<img 
-      align="left" 
-      alt="GitHub Stats" 
-      height="200" 
-      src="https://github-readme-stats.vercel.app/api/top-langs/?username=Thulio-Zago&theme=tokyonight&layout=compact&custom_title=Tecnologias&langs_count=9&cache_seconds=360" 
-  />
-
-</p>
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/github-stats.svg || true
+          if ! git diff --staged --quiet; then
+            git commit -m "chore: update github stats svg"
+            git push
+          else
+            echo "Sem alterações para commitar"
+          fi
