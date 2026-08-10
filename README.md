@@ -1,6 +1,6 @@
 #  💻 Thúlio Zago 
 
-Me chamo Thúlio Zago, tenho 19 anos e sou natural do Americana/SP. Concluí o ensino médio no Colegio Politec. Atualmente, estou cursando Sistemas da Informação na Fam.
+Me chamo Thúlio Zago, tenho 20 anos e sou natural do Americana/SP. Concluí o ensino médio no Colegio Politec. Atualmente, estou cursando Sistemas da Informação na Fam.
 
 Apaixonada por tecnologia, sou independente, racional e adoro explorar novas possibilidades no mundo digital.
 
