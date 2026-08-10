@@ -83,6 +83,6 @@ Apaixonada por tecnologia, sou independente, racional e adoro explorar novas pos
 
 ### 📊 Estatísticas
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Thulio-Zago&show_icons=true&theme=tokyonight&include_all_commits=true&locale=pt-br)
+[GitHub Stats](https://github-stats-extended.vercel.app/api?username=Thulio-Zago&show_icons=true&theme=tokyonight&include_all_commits=true&locale=pt-br)
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Thulio-Zago&theme=tokyonight&layout=compact&custom_title=Tecnologias&langs_count=9)
+![Top Langs](https://github-stats-extended.vercel.app/api/top-langs/?username=Thulio-Zago&theme=tokyonight&layout=compact&custom_title=Tecnologias&langs_count=9)
